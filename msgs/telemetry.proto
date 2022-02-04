@@ -1,0 +1,77 @@
+syntax = "proto3";
+
+message TelemetryMessage {
+    string deviceId = 1;
+    string Track = 2;
+    bool update = 3;
+    bool valid = 4;
+    uint32 realTimeStamp = 5;
+    uint32 realTimeMilli = 6;
+    uint32 ping = 7;
+    uint32 iTOW = 8;
+    uint32 dTow = 9;
+    uint32 dTowOriginal = 10;
+    bool dTowCalibFlag = 11;
+    uint32 flagsRaw = 12;
+    uint32 flags = 13;
+    bool calibFlag = 14;
+    uint32 fixType = 15;
+    uint32 pDOP = 16;
+    uint32 hAcc = 17;
+    uint32 numSV = 18;
+    uint32 numSat = 19;
+
+    uint32 LapNo = 20;
+    float LapCur = 21;
+    float LapPrev = 22;
+    bool prevLapValid = 23;
+
+    uint32 SectNo = 24;
+    repeated float SectTime = 25;
+    repeated float prevSectTime = 26;
+    repeated bool prevSectValid = 27;
+
+    uint32 FastLapNo = 28;
+    float FastLapTm = 29;
+    float DeltaTime = 30;
+
+    float PositionIndex = 31;
+    float PosLocalX = 32;
+    float PosLocalY = 33;
+
+    float gSpeed = 34;
+    float headMot = 35;
+    float Speed = 36;
+    repeated MinMax SpeedUL = 37;
+    float OffDist = 38;
+
+    float lat = 40;
+    float lon = 41;
+    float height = 42;
+    float AccelXr = 43;
+    float AccelYr = 44;
+    float AccelZr = 45;
+    float AngleRateXr = 46;
+    float AngleRateYr = 47;
+    float AngleRateZr = 48;
+    
+    float DeviceTemp = 50;
+    float AccelX = 51;
+    float AccelY = 52;
+    float AccelZ = 53;
+    float AngleRateX = 54;
+    float AngleRateY = 55;
+    float AngleRateZ = 56;
+
+    float carBattery = 90;
+    float deviceBattery = 91;
+
+    map<string, float> canMsg = 100;
+}
+
+message MinMax {
+    float min = 1;
+    float max = 2;
+}
+
+

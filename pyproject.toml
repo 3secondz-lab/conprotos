@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "conprotos"
+version = "0.1.0"
+description = ""
+authors = ["yoonjinh <yoonjinh@3secondz.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+protobuf = "^3.19.3"
+pandas = "^1.4.0"
+pyarrow = "^6.0.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
